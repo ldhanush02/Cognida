@@ -7,7 +7,246 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Background color for Home page */
+.body1{
+  background-color:aliceblue !important;
+}
+
+
+/* images in cardin Home page( page-1) */
+.cardimg{
+width: 350px;
+height: 350px;
+}
+
+/* Space alignments between cards */
+.Home{
+  align-items:baseline;
+  justify-content: space-evenly;
+}
+
+/* Margining of cards */
+.card{
+  margin-top: 65px;
+  top: -220px;
+  border-radius: 4% !important;
+}
+
+
+ /*About us button in footer */
+.btn-grad {
+  background-image: linear-gradient(to right, #1CD8D2 0%, #93EDC7  51%, #1CD8D2  100%);
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;            
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+ /*About us button hover effect */
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Carousel in  Home page*/
+.carouselitem{
+  top: 86px;
+}
+
+
+/* Website footer elements */
+.last{
+  font-family: 'Libre Baskerville', serif;
+}
+
+/* Website whole footer*/
+.myfooter{
+  bottom: 200px;
+  overflow: hidden;
+}
+
+/* Each product information in page-2 whole page display */
+.productinfo{
+  padding-top: 85px;
+}
+
+/* Each product image in page-2 */
+.prodpic{
+  width: 410px;
+}
+
+/* Each product discount price */
+.prodcost{
+  text-decoration: line-through;
+}
+
+/* Item Description in page-2 spacing */
+.proddescription{
+  padding: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+/* Each product information in page-2 whole page display spacing */
+.prodinfo{
+  justify-content: space-around;
+  align-items: center;
+}
+/* Each product information in page-2 (Middle part) */
+
+.prodinfo2{
+  width: 550px;
+}
+
+
+/* Buy Now button*/
+         
+.btn-grad10 {
+  font-family: 'Kings', cursive;
+  letter-spacing: 5px;
+  background-image: linear-gradient(to right, #ffb347 0%, #ffcc33  51%, #ffb347  100%);
+  margin: 10px;
+  padding: 5px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: black;            
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+/* Buy Now button hovering*/
+
+.btn-grad10:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: rgb(0, 194, 194);
+  text-decoration: none;
+}
+
+/* Add to cart button */
+         
+.btn-grad11 {
+  font-family: 'Kings', cursive;
+  letter-spacing: 3px;
+  background-image: linear-gradient(to right, #00c6ff 0%, #0072ff  51%, #00c6ff  100%);
+  margin: 10px;
+  padding: 5px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;            
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+/* Add to cart button hovering */
+
+.btn-grad11:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Product Name font int page-1 (Home page) */
+.cardtitle{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+}
+/* Product price font in home page*/
+.cardprice{
+  font-size: 25px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Navbar words font */
+.navitem{
+  font-family: 'Kings', cursive;
+  font-size: 23px;
+  letter-spacing: 2px;
+}
+
+/* Item price in Page 2 */
+.itemprice2{
+  font-size: 37px;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Circluar price displayb in page-2 */
+.buydetails{
+  background-image: linear-gradient(to right,#FDFCFB,#e3d2c4);
+}
+
+/* Title in page 2 */
+.title1{
+  font-family: 'PT Serif', serif;
+  font-size: 40px;
+}
+/* Rating in page-2 */
+.rating2{
+  font-family: 'PT Serif', serif;
+  font-size: 23px;
+}
+
+/* Item type in page-2 */
+.itemtype{
+  font-family: 'PT Serif', serif;
+  font-size: 28px;
+}
+
+/* Item price in page 2 */
+.itemcost2{
+  font-family: 'Bitter', serif;
+  font-weight: bold;
+}
+
+/* Item Description title in page-2  */
+.iteminfo2{
+  font-family: 'Ibarra Real Nova', serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 25px;
+}
+
+/* Item Description in page-2 letter style */
+.iteminfo3{
+  font-family: 'Ibarra Real Nova', serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 18px;
+}
+
+/* Description in page-2 body color */
+.descriptionbody{
+  background-image: linear-gradient(to right,#f5f1f1,#dff1f1);
+}
+
+/* Carousel bar sizing (left)*/
+.carouselbar{
+  width: 65px !important;
+  height: 110px;
+  margin-top: 100px;
+  border-radius: 0px 30px 30px 0px ;
+}
+/* Carousel bar sizing (right) */
+.carouselbar1{
+  width: 65px !important;
+  height: 110px;
+  margin-top: 100px;
+  border-radius: 30px 0px 0px 30px ;
 }
