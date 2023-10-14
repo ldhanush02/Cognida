@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState,useEffect } from "react";
 import Productinfo from "./Productinfo";
 import { useParams } from "react-router-dom"
+import { CirclesWithBar } from "react-loader-spinner";
 function ProductDisplay() {
     // To retrieve ID Number in URL
     const {productId}=useParams();
@@ -20,13 +21,40 @@ function ProductDisplay() {
     })},[])
     return (
       // Card Composition
-      <div className="container-fluid productinfo">
+      <div>
       {
-        dataProduct1.map((item,index)=>
-              <Productinfo item={item} index={index}/>
-        )
-        }
+        (dataProduct1.length==0)?(<>
+          <div className="homeloader3">
+          <CirclesWithBar
+          height="100"
+          width="100"
+          color="#4fa94d"
+          wrapperStyle={{}}
+          wrapperClass=""
+          visible={true}
+          outerCircleColor=""
+          innerCircleColor=""
+          barColor=""
+          ariaLabel='circles-with-bar-loading'
+        />  
+        <h6 className="text-success">Loading ...</h6>  
+
+        </div>      
+          </>)
+        :
+        (<>
+          <div className="container-fluid productinfo">
+          {
+            dataProduct1.map((item,index)=>
+                  <Productinfo item={item} index={index}/>
+            )
+            }
+          </div>
+          
+          </>)
+      }
       </div>
+ 
     );
   }
   

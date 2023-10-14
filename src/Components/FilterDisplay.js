@@ -1,30 +1,31 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useState,useEffect } from "react";
+import Productinfo from "./Productinfo";
+import { useParams } from "react-router-dom"
 import CardOne from "./CardOne";
-import Carouselitem from "./Carouselitem";
 import { CirclesWithBar } from "react-loader-spinner";
-
-function Home() {
-  // Data of Products
-    const [data1,setData]=useState([]);
+function FilterDisplay() {
+    // To retrieve ID Number in URL
+    const {FilterName}=useParams();
+    // Product Data
+    const [dataProduct1,setDataProduct]=useState([]);
+    // Retrieving Product Data with ID number with get method 
     useEffect(()=>{
-      // Get Method to get Data of Products 
-    axios.get('https://fakestoreapi.com/products')
+    axios.get('https://fakestoreapi.com/products/'+'category/'+FilterName)
     .then((response)=>{
-            setData(response.data);
+            setDataProduct(response.data);
             console.log(response.data)
            
     })
     .catch((err)=>{
         alert("Error occured while fetching data")
-    })},[])
+    })},[FilterName])
     return (
       // Home page
-      <div>
- 
+      <div className="body1">
       {
-        (data1.length==0)?(<>
-          <div className='homeloader'>
+        (dataProduct1.length==0)?(<>
+          <div className='homeloader2'>
           <CirclesWithBar
           height="100"
           width="100"
@@ -41,25 +42,26 @@ function Home() {
 
         </div>
           </>)
-        : 
+        :
         (<>
-          <div>
-          <Carouselitem/>
-           </div>
-          <div className="d-flex card-group Home body2">
+      <div className="filterhome">
+ 
+          <div className="d-flex card-group Home2">
           {
-          data1.map((item,index)=>
+          dataProduct1.map((item,index)=>
                 <CardOne item={item} index={index}/>
           )
           }
           </div>
-          
+      </div>
+
           </>)
       }
+  
 
       </div>
     );
   }
   
-  export default Home;
+  export default FilterDisplay;
   

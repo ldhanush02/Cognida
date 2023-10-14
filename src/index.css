@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 
@@ -12,6 +13,33 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+
+button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  font-size: 1em;
+  padding: 4px 8px;
+  cursor: pointer;
+  margin: 0;
+}
+
+button:focus {
+  outline: none;
+}
+
+span {
+  margin: 0 8px;
+  font-size: 1em;
+}
+
 
 /* Background color for Home page */
 .body1{
@@ -27,7 +55,14 @@ height: 350px;
 
 /* Space alignments between cards */
 .Home{
-  align-items:baseline;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.Home2{
+  display: flex;
+  align-items: center;
   justify-content: space-evenly;
 }
 
@@ -36,9 +71,39 @@ height: 350px;
   margin-top: 65px;
   top: -220px;
   border-radius: 4% !important;
+  max-width: 20rem;
+  min-height: 35rem;
 }
 
+.homeloader{
+  margin-top: 200px ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 200px;
+  flex-direction: column;
 
+}
+.homeloader2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 81px;
+}
+
+.carttop{
+  margin-bottom: 10px;
+}
+
+.homeloader3{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 81px;
+  padding-top: 91px;
+}
  /*About us button in footer */
 .btn-grad {
   background-image: linear-gradient(to right, #1CD8D2 0%, #93EDC7  51%, #1CD8D2  100%);
@@ -63,7 +128,10 @@ height: 350px;
 /* Carousel in  Home page*/
 .carouselitem{
   top: 86px;
+  /* top: 2em */
 }
+
+
 
 
 /* Website footer elements */
@@ -84,7 +152,7 @@ height: 350px;
 
 /* Each product image in page-2 */
 .prodpic{
-  width: 410px;
+  max-width: 410px;
 }
 
 /* Each product discount price */
@@ -101,15 +169,87 @@ height: 350px;
 
 /* Each product information in page-2 whole page display spacing */
 .prodinfo{
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  
 }
 /* Each product information in page-2 (Middle part) */
 
 .prodinfo2{
-  width: 550px;
+  max-width: 550px;
 }
 
+.prodinfo3{
+  width: 40vw;
+  margin-top: 30px;
+}
+
+.mybold{
+  font-weight: bold;
+}
+.quantity-controls button {
+  font-size: 1rem;
+}
+
+@media (max-width: 576px) {
+  .itemprice2 {
+    font-size: 1.5rem;
+  }
+  
+  .prodcost {
+    font-size: 0.8rem;
+  }
+  
+  .quantity-controls button {
+    font-size: 0.6rem;
+    display: block;
+    margin: auto !important;
+  }
+
+}
+
+@media (max-width:640px){
+  .quantity-controls{
+    font-size: 10px;
+  }
+  .myres{
+    font-size: 0.8rem !important;
+  }
+  .prodinfo3{
+    font-size: 0.6rem !important;
+  }
+  .btn-grad10{
+    letter-spacing: 1px !important;
+    padding: 3px 10px !important;
+  }
+  .btn-grad11{
+    letter-spacing: 1px !important;
+    padding: 3px 10px !important;
+  }
+  .buydetails{
+    padding: 1px !important;
+  }
+
+  .myreshv{
+    font-size: 0.4rem !important;
+  }
+  .title1{
+    font-family: 'PT Serif', serif;
+    font-size: 20px !important;
+  }
+  .myinfo{
+    font-size: 20px !important;
+  }
+  .iteminfo3{
+    font-size: 15px !important
+  }
+  .form-control{
+    max-width: 50vw !important;
+    min-width: 20vw !important;
+  }
+}
 
 /* Buy Now button*/
          
@@ -176,7 +316,7 @@ height: 350px;
 /* Navbar words font */
 .navitem{
   font-family: 'Kings', cursive;
-  font-size: 23px;
+  font-size: 1.2rem;
   letter-spacing: 2px;
 }
 
@@ -190,6 +330,8 @@ height: 350px;
 /* Circluar price displayb in page-2 */
 .buydetails{
   background-image: linear-gradient(to right,#FDFCFB,#e3d2c4);
+  padding: 10px;
+  border-radius: 20%;
 }
 
 /* Title in page 2 */
@@ -238,15 +380,254 @@ height: 350px;
 
 /* Carousel bar sizing (left)*/
 .carouselbar{
-  width: 65px !important;
-  height: 110px;
+  max-width: 65px !important;
+  max-height: 110px;
   margin-top: 100px;
   border-radius: 0px 30px 30px 0px ;
 }
 /* Carousel bar sizing (right) */
 .carouselbar1{
-  width: 65px !important;
-  height: 110px;
+  max-width: 65px !important;
+  max-height: 110px;
   margin-top: 100px;
   border-radius: 30px 0px 0px 30px ;
 }
+
+
+
+.filterhome{
+  padding-top: 20vh;
+}
+
+
+.login{
+  display: flex;
+  justify-content:space-around;
+  align-items:center;
+}
+.App{
+  animation: zoomInDown 1s,
+             flip 0.5s 1s,
+             heartBeat 0.5s 1.5s,
+             fadeIn 1s 2s;
+  padding-top: 120px;
+  padding-left: 100px;
+}/* Social Media icons */
+.socialicons{
+  font-size: 30px;
+}
+.register{
+  background-color: transparent !important;
+}
+.socialiconsparent{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.body1{
+  padding-top: 150px;
+ }
+
+
+
+@media (max-width:990px){
+  .login{
+    flex-direction: column ;
+  }
+  .App{
+    padding-top: 20px ;
+    padding-left: 0px;
+  }
+  .form{
+    margin-top: 0px;
+  }
+}
+
+
+.tab{
+  padding-left: 220px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+}
+
+@media (max-width:990px){
+  .tab{
+    padding-left: 120px;
+  }
+}
+
+.history{
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+  align-items: center;
+}
+
+.cardtwo{
+ border-radius: 5%;
+}
+.buttonflex{
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+}
+
+.cart{
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+  align-items: center;
+}
+
+
+
+.costprice{
+  font-weight: bolder;
+}
+
+.formbar{
+  display: flex;
+  align-items: center;
+  justify-content:start;
+  margin-bottom: 0rem;
+}
+
+.body2{
+  background-color:aliceblue !important;
+ }
+
+ .myimage{
+  box-shadow: 0 0 10px #03bcf4,
+  0 0 20px #03bcf4,
+  0 0 40px #03bcf4;
+ }
+ .neon-text-noshwithbx{
+  box-shadow: 0 0 10px #03bcf4,
+  0 0 20px #03bcf4,
+  0 0 40px #03bcf4;
+
+}
+
+.sidebarbutton{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+
+.mycollections{
+  padding-top: 300px !important;
+}
+
+.btn1{
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+@media (max-width:520px){
+.buttonflex{
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.mybtn1{
+  margin-bottom: 3px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.mybtn2{
+  margin-bottom: 2px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+}
+
+@media (max-width:390px){
+  .carttextbody{
+    font-size: 10px !important;
+  }
+  .carttextbody1{
+    font-size: 10px !important;
+    text-align: center;
+  }
+  .mybtn1{
+    font-size: 10px !important;
+    padding-left: 0.4rem !important;
+    padding-right: 0.4rem !important;
+  }
+  .mybtn2{
+    font-size: 10px !important;
+    padding-left: 0rem !important;
+    padding-right: 0rem !important;
+  }
+  .nowrap{
+    white-space: nowrap !important;
+  }
+  }
+
+  .Home{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  @media (max-width:900px){
+    .Home{
+      padding-top: 200px;
+    }
+  }
+
+  @media (max-width:370px){
+    .Home{
+      padding-top: 220px !important;
+    }
+    .carouselbar{       
+      max-width: 65px !important;
+      min-height: 110px;
+      }
+      .carouselbar1{       
+        max-width: 65px !important;
+        min-height: 110px;
+        }
+  }
+
+  @media (max-width:170px){
+    .Home{
+      padding-top: 250px !important;
+    }
+    .carouselitem{
+      margin-top: 40px !important;
+    }
+
+  }
+  
+@media (max-width:580px){
+    .Home{
+      padding-top: 200px;
+      flex-direction: column;
+    }
+    .Home2{
+      padding-top: 200px;
+      flex-direction: column;
+    }
+    .cardfonttext{
+      font-size: 12px !important;
+      text-align: center;
+    }
+    .freetext{
+      display: block;
+      margin-bottom: 10px !important;
+    }
+    .cardprice{
+      font-size: 14px !important;
+    }
+  }
+
+
+
+  .loginoutbutton {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
