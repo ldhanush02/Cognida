@@ -25,7 +25,7 @@ function Register() {
         .then((response)=>{
             // alert((response.data.message));
             if(response.data.message==="User has created Successfully.Now please Login"){
-            swal(response.data.message,"","success")
+            swal(response.data.message,"Please Now Login","success")
               navigate("/login")
             }
             else{
